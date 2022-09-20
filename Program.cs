@@ -2,27 +2,19 @@
 
 public class Program
 {
-	/*
-	pairMultiply() на вход принимает массив, ни чего не возвращает
-	*/
+	
 	static void pairMultiply(int[] array)
 	{
-		int size = array.Length; //для удобства объявим переменную размер массива
-		int count = 0; //счётчик пар
-
-		for(int i = 0, j = size - 1; i < size / 2; i++, j--) //переменная i обходит массив с начала, переменная j с конца.
+		int size = array.Length; 
+		int count = 0; 
+		for(int i = 0, j = size - 1; i < size / 2; i++, j--) 
 		{
-			int pairMult = array[i] * array[j]; //вычисляем произведение пары чисел
+			int pairMult = array[i] * array[j]; 
 			Console.WriteLine($"multiplys pair {++count} = {pairMult}");
 		}
 	}
 
-	/*
-	метод для создания массива рандомных чисел
-	int first значение первого рандомного значения
-	int last значение последнего рандомного значения
-	int capacity размер массива
-	*/
+
 	static int[] IntRandomArrayMaker(int first, int last, int capacity)
 	{
 		int[] array = new int[capacity];
